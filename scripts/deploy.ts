@@ -28,10 +28,35 @@ async function main() {
   // proxyContractAddress = smartcontract1.address;
 
 
-  const MMTX = await ethers.getContractFactory("MMTX");
-  const mmtX = await MMTX.deploy();
-  await mmtX.deployed();
-  console.log(`MMTX deploy address = ${mmtX.address}`);
+  const USD = await ethers.getContractFactory("USD");
+  const vUSD = await USD.deploy();
+  await vUSD.deployed();
+  console.log(`USD deploy address = ${vUSD.address}`);
+
+  const CAD = await ethers.getContractFactory("CAD");
+  const vCAD = await CAD.deploy();
+  await vCAD.deployed();
+  console.log(`CAD deploy address = ${vCAD.address}`);
+
+  const EUR = await ethers.getContractFactory("EUR");
+  const vEUR = await EUR.deploy();
+  await vEUR.deployed();
+  console.log(`EUR deploy address = ${vEUR.address}`);
+
+  const ILS = await ethers.getContractFactory("ILS");
+  const vILS = await ILS.deploy();
+  await vILS.deployed();
+  console.log(`ILS deploy address = ${vILS.address}`);
+
+  const JPY = await ethers.getContractFactory("JPY");
+  const vJPY = await JPY.deploy();
+  await vJPY.deployed();
+  console.log(`JPY deploy address = ${vJPY.address}`);
+
+  const ZAR = await ethers.getContractFactory("ZAR");
+  const vZAR = await ZAR.deploy();
+  await vZAR.deployed();
+  console.log(`ZAR deploy address = ${vZAR.address}`);
 
   // const BTIX = await ethers.getContractFactory("BTIX");
   // const btiX = await BTIX.deploy();

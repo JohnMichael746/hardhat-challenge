@@ -12,10 +12,11 @@ import "solidity-coverage";
 dotenv.config();
 
 const private_key = process.env.PRIVATE_KEY;
-const local_mnemonic = process.env.LOCAL_MNEMONIC;
-const bsc_testnet = process.env.BSC_TESTNET_URL;
-const mainnet_url = process.env.MAINNET_URL;
-const ddtestnet_url = process.env.DD_TESTNET_URL;
+// const local_mnemonic = process.env.LOCAL_MNEMONIC;
+// const bsc_testnet = process.env.BSC_TESTNET_URL;
+// const mainnet_url = process.env.MAINNET_URL;
+// const ddtestnet_url = process.env.DD_TESTNET_URL;
+const testnet_url = process.env.TESTNET_URL;
 const etherscan_api_key = process.env.BSCSCAN_API_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -64,22 +65,26 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
-    localhost: {
-      url: "http://127.0.0.1:8545",
-      accounts:
-        { mnemonic: local_mnemonic }
-    },
-    bsc_testnet: {
-      url: bsc_testnet || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    mainnet: {
-      url: mainnet_url,
-      accounts: private_key !== undefined ? [private_key] : []
-    },
-    digitaldollar: {
-      url: ddtestnet_url,
+    // localhost: {
+    //   url: "http://127.0.0.1:8545",
+    //   accounts:
+    //     { mnemonic: local_mnemonic }
+    // },
+    // bsc_testnet: {
+    //   url: bsc_testnet || "",
+    //   accounts:
+    //     process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // },
+    // mainnet: {
+    //   url: mainnet_url,
+    //   accounts: private_key !== undefined ? [private_key] : []
+    // },
+    // digitaldollar: {
+    //   url: ddtestnet_url,
+    //   accounts: private_key !== undefined ? [private_key] : []
+    // }
+    testnet: {
+      url: testnet_url,
       accounts: private_key !== undefined ? [private_key] : []
     }
   },

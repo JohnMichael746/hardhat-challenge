@@ -5,7 +5,7 @@
     "localnode": "npx hardhat node",
     "test": "npx hardhat test",
     "deploy:localhost": "npx hardhat run --network localhost scripts/deploy.ts",
-    "deploy:testnet": "npx hardhat run --network bsc_testnet scripts/deploy.ts",
+    "deploy:testnet": "npx hardhat run --network testnet scripts/deploy.ts",
     "deploy:mainnet": "npx hardhat run --network bsc_mainnet scripts/deploy.ts",
     "deploy:digitaldollar": "npx hardhat run --network digitaldollar scripts/deploy.ts",
     "verify": "npx hardhat verify --contract contracts/MMTX.sol:MMTX --network bsc_testnet 0x6a26E9Db9CC6CECAF46c2aea396C6B43Cb1Dd815",
